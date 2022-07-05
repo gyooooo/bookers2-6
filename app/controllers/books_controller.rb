@@ -2,9 +2,10 @@ class BooksController < ApplicationController
   before_action :authenticate_user!
 
   def show
+    @book_new = Book.new
     @book = Book.find(params[:id])
     @user = @book.user
-    @books = Book.new
+    # @books = Book.
   end
 
   def index
@@ -30,7 +31,7 @@ class BooksController < ApplicationController
   end
 
   def edit
-    @user = User.find(params[:id])
+    # @user = User.find(params[:id])
     @book = Book.find(params[:id])
     if @book.user == current_user
     render "edit"

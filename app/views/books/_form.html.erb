@@ -10,10 +10,6 @@
   </div>
 
   <div class="actions">
-    <% if @book.new_record? %>
     <%= f.submit "Create Book", class: 'btn btn-success' %>
-    <% else %>
-    <%= f.submit "Update Book", class: 'btn btn-success' %>
-    <% end %>
   </div>
 <% end %>
