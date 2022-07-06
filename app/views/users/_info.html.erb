@@ -8,7 +8,22 @@
 	  <th>introduction</th>
 	  <th><%= user.introduction %></th>
   </tr>
-</table>
+  
+  <!--サイドバーにカウント-->
+   <!--<tr>-->
+   <!-- <th>follows：<%#= @user.user_follows.count %></th>-->
+   <!--</tr>-->
+   <!--<tr>-->
+   <!-- <th>followers：<%#= @user.user_followers.count %></th>-->
+   <!--</tr>-->
+   
+        <!--<%# @user.user_followss.each do |user_follows| %>-->
+        <!-- <%# end %>-->
+         
+         </td>
+     </table>
+     
+<!--フォローボタン-->
 
 <div class='row'>
   <%= link_to edit_user_path(user), class: "btn btn-outline-secondary btn-block edit_user_#{user.id}" do %>

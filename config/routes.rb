@@ -11,10 +11,18 @@ end
   resources :users, only: [:show, :edit, :update]
   
   get 'users' => 'users#index'
+  
   resources :books
   post "/books" => "books#create", as: "create"
   
+  resources :users do
+    resources :relationships, only: [:create, :destroy]
+    # member do
+    get 'followings' => 'relationships#followings', as: 'followings'
+    get 'followers' => 'relationships#followers', as: 'followers'
+    # get :following, :followers
+    # end
+  end
   # resources :book_comments, only: [:create]
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-
 end
