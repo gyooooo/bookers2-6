@@ -59,30 +59,52 @@
         </tbody>
       </table>
       
-      <div class='col-md-8 offset-md-1'>
-        <table class='table'>
-  		  <tbody>
-      <%= @books.each do |book| %>
+      <table>
+  <tbody>
+      <% @book.book_comments.each do |book_comment| %>
       <tr>
-       <td><%= link_to user_path(@user.id) do %>
-            <%= image_tag @user.get_profile_image(50, 50) %><br>
-            <%= @user.name %>
-            <% end %>
-          </td>
-       <span><%= book.comment %></span>
-           <td><%= link_to 'Destroy', @book, method: :delete, data: { confirm: '本当に消しますか？' }, class: "btn btn-sm btn-danger destroy_book_#{@book.id}"%></td>
-       <% end %>
-       </tr>
-       </tbody>
-       </table>
-       </div>
+        
+        <td>
+          <%= link_to user_path(book_comment.user) do %>
+            <%= image_tag book_comment.user.get_profile_image(50,50) %><br>
+            <%= book_comment.user.name %>
+          <% end %>
+        </td>
+        <td><%= book_comment.comment %></td>
+        <td>
+          <% if book_comment.user == current_user %>
+            <%= link_to "Destroy", book_book_comment_path(@book, book_comment), method: :delete, class: "btn btn-danger pull-right" %>
+          <% end %>
+        </td>
+      </tr>
+      <% end %>
+  </tbody>
+</table>
+      
+    <!--  <div class='col-md-8 offset-md-1'>-->
+    <!--    <table class='table'>-->
+  		<!--  <tbody>-->
+    <!--  <%#= @books.each do |book| %>-->
+    <!--  <tr>-->
+    <!--   <td><%#= link_to user_path(@user.id) do %>-->
+    <!--        <%#= image_tag @user.get_profile_image(50, 50) %><br>-->
+    <!--        <%#= @user.name %>-->
+    <!--        <%# end %>-->
+    <!--      </td>-->
+    <!--   <span><%#= book.comment %></span>-->
+    <!--       <td><%#= link_to 'Destroy', @book, method: :delete, data: { confirm: '本当に消しますか？' }, class: "btn btn-sm btn-danger destroy_book_#{@book.id}"%></td>-->
+    <!--   <%# end %>-->
+    <!--   </tr>-->
+    <!--   </tbody>-->
+    <!--   </table>-->
+    <!--   </div>-->
        
       
       <%= form_with model: [@book, @book_comment] do |f| %>
-          <%= f.text_area :comment, rows: '10', placeholder: "コメントをここに" %>
+          <%= f.text_area :comment, rows: '10', placeholder: "コメントをここに", class: "w-100" %>
           <%= f.submit "送信する" %>
            <% end %>
 
-    </div>
+    <!--</div>-->
   </div>
 </div>
