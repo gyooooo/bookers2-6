@@ -16,7 +16,7 @@ end
   
   resources :users do
     resource :relationships, only: [:create, :destroy]
-    # 単数形にするとIDが
+    # 単数形にするとIDが消える
     get 'followings' => 'relationships#followings', as: 'followings'
     get 'followers' => 'relationships#followers', as: 'followers'
 
