@@ -5,7 +5,13 @@ class SearchesController < ApplicationController
      @model = params["model"]
      @content = params["content"]
      @method = params["method"]
-     @records = serch_for(@model,@content,@method)
+      if @model == 'user'
+	   @records = User.search_for(@content, @method)
+      else
+	   @records = Book.search_for(@content, @method)
+	   #@books = Book.all
+	  end
+    #  @records = serch_for(@model,@content,@method)
     end
     #   @range = params[:range]
     #   if @range == "User"
@@ -14,22 +20,22 @@ class SearchesController < ApplicationController
     #   @books = Book.looks(params[:search], params[:word])
     #   end
     
-    private
-    def search_for(model,content,method)
-        if model == 'user'
-            if method == 'perfect'
-                User.where(name: content)
-            else
-                User.where('name LIKE ?', '%'+content+'%')
-            end
+    # private
+    # def search_for(model,content,method)
+    #     if model == 'user'
+    #         if method == 'perfect'
+    #             User.where(name: content)
+    #         else
+    #             User.where('name LIKE ?', '%'+content+'%')
+    #         end
             
-        elsif model == 'post'
-            if method == 'perfect'
-             Post.where(title: content)
-            else
-             Post.where('title LIKE ?', '%'+content+'%')
-            end
-        end
-    end
+    #     elsif model == 'book'
+    #         if method == 'perfect'
+    #          Book.where(title: content)
+    #         else
+    #          Book.where('title LIKE ?', '%'+content+'%')
+    #         end
+    #     end
+    # end
         
 end

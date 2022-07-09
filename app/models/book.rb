@@ -12,17 +12,29 @@ class Book < ApplicationRecord
    end
    
   # フォロー・フォロワー機能
-   def self.search_for(content, method)
+  # def self.search_for(content, method)
+  #   if method == 'perfect'
+  #     Book.where(title: content)
+  #   elsif method == 'forward'
+  #     Book.where('title LIKE ?', content+'%')
+  #   elsif method == 'backward'
+  #     Book.where('title LIKE ?', '%'+content)
+  #   else
+  #     Book.where('title LIKE ?', '%'+content+'%')
+  #   end
+  # end
+  
+  def self.search_for(content, method)
     if method == 'perfect'
       Book.where(title: content)
     elsif method == 'forward'
-      Book.where('title LIKE ?', content+'%')
+      Book.where('title LIKE ?', content + '%')
     elsif method == 'backward'
-      Book.where('title LIKE ?', '%'+content)
+      Book.where('title LIKE ?', '%' + content)
     else
-      Book.where('title LIKE ?', '%'+content+'%')
+      Book.where('title LIKE ?', '%' + content + '%')
     end
-   end
+  end
   
   # 検索方法分岐
   def self.looks(search, word)

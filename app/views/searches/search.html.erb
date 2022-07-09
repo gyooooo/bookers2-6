@@ -1,7 +1,15 @@
 <% if @model == 'user' %>
-  <h3>【Usersモデルの検索結果】検索ワード：<%= @content %></h3>
+	<h3>Users search for "<%= @content %>"</h3>
   <%= render 'users/index', users: @records %>
-<% else @model == 'posts' %>
-  <h3>【Postsモデルの検索結果】検索ワード：<%= @content %></h3>
-    <%= render 'posts/index', posts: @records %>
+<% elsif @model == 'book' %>
+	<h3>Books search for "<%= @content %>"</h3>
+  <%= render 'books/index', books: @records %>
 <% end %>
+
+<!--<%# if @model == 'user' %>-->
+<!--  <h3>【Usersモデルの検索結果】検索ワード：<%#= @content %></h3>-->
+<!--  <#%= render 'users/index', users: @records %>-->
+<!--<%# else @model == 'posts' %>-->
+<!--  <h3>【Postsモデルの検索結果】検索ワード：<%#= @content %></h3>-->
+<!--    <%#= render 'posts/index', posts: @records %>-->
+<!--<%# end %>-->

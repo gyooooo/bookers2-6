@@ -58,4 +58,21 @@
 </header>
 
   <!--検索機能-->
-  <%= render partial: 'searches/search', locals: { user: @user, book: @new_book } %>
+  <!--CSS追加.今左にいる-->
+  <div class="container">
+    <div class="row">
+         <div class="mx-auto">
+          <div>
+            <%= render partial: 'searches/search', locals: { user: @user, book: @new_book } %>
+          </div>
+         </div>
+    </div>
+  </div>
+  
+  <!--<p class="text-center">-->
+  <!--  <%#= render partial: 'searches/search', locals: { user: @user, book: @new_book } %>-->
+  <!--</p>-->
+    
+  <!--<div class="center-block">-->
+  <!--<div><%#= render partial: 'searches/search', locals: { user: @user, book: @new_book } %></div>-->
+  <!--</div>-->
