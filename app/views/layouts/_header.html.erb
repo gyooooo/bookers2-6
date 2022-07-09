@@ -28,6 +28,7 @@
               <i class="fas fa-sign-out-alt"></i> logout
             <% end %>
           </li>
+        
         <% else %>
           <li>
             <%= link_to root_path,class: 'nav-link text-light' do %>
@@ -55,3 +56,6 @@
     </div>
   </nav>
 </header>
+
+  <!--検索機能-->
+  <%= render partial: 'searches/search', locals: { user: @user, book: @new_book } %>

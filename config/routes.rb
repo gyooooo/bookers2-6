@@ -22,6 +22,7 @@ end
 
   end
   get '/search', to: 'searches#search'
+  get "search" => "searches#search"
 end
 
 # devise_for :users
