@@ -43,3 +43,9 @@ while(num < max){
 }
 
 alert('2を掛け続けて' + max + 'を超えるのに必要だった回数は' + count + '回です');
+
+// varによる再宣言
+var nickname = "taro"
+console.log(nickname)
+var nickname = "ichiro"
+console.log(nickname)
