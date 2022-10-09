@@ -166,3 +166,9 @@ function winLose(user, js){
 
   return winLoseStr;
 }
+
+
+// jquery
+$(document).ready(function () {
+  $('body').html('<h1>Hello jQuery!!</h1>');
+});
