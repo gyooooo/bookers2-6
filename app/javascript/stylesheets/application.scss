@@ -1,12 +1,30 @@
 @import "~bootstrap/scss/bootstrap"; 
 @import '~@fortawesome/fontawesome-free/scss/fontawesome';
 
-.box1 {
-  background-color: #FF0000;
-  height: 200px;
-  width: 200px;
-}
 
 .box1-ext {
   border: 10px solid black;
+}
+
+.box1 {
+  background-color: #FFFFFF;
+  height: 200px;
+  width: 200px;
+  float: left;
+}
+
+.bg1 {
+  background-color: #FFAAAA;
+}
+
+.bg2 {
+  background-color: #FFBBBB;
+}
+
+.bg3 {
+  background-color: #FFCCCC;
+}
+
+.bg4 {
+  background-color: #FFDDDD;
 }
