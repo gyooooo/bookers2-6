@@ -1,25 +1,67 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Bookers2Ver2</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+<!--<!DOCTYPE html>-->
+<!--<html>-->
+<!--  <head>-->
+<!--    <title>Bookers2Ver2</title>-->
+<!--    <%#= csrf_meta_tags %>-->
+<!--    <%#= csp_meta_tag %>-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">-->
+<!--    <%#= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>-->
+<!--    <%#= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>-->
     
+<!--  </head>-->
+<!--  <body>-->
+<!--    <%#= render 'layouts/header' %>-->
+<!--      <main>-->
+<!--        <p id="notice"><%#= notice %></p>-->
+<!--        <%#= yield %>-->
+<!--      </main>-->
+<!--    <%#= render 'layouts/footer' %>-->
+    
+<!--     <div class="box1"></div>-->
+<!--    <script src="jquery.min.js"></script>-->
+<!--    <script src="app.js"></script>-->
+    
+<!--  </body>-->
+<!--</html>-->
+
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>10章【ハンバーガーメニューを作ってみよう】</title>
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <%= render 'layouts/header' %>
-      <main>
-        <p id="notice"><%= notice %></p>
-        <%= yield %>
-      </main>
-    <%= render 'layouts/footer' %>
-    
-     <div class="box1"></div>
-    <script src="jquery.min.js"></script>
-    <script src="app.js"></script>
-    
+    <h1>10章【ハンバーガーメニューを作ってみよう】</h1>
+
+    <div id="sp-menu">
+      <h2>MENU</h2>
+      <ul>
+        <li><a href="#">MENU1</a></li>
+        <li><a href="#">MENU2</a></li>
+        <li><a href="#">MENU3</a></li>
+        <li><a href="#">MENU4</a></li>
+        <li><a href="#">MENU5</a></li>
+      </ul>
+    </div>
+
+    <div id="hm-icon">
+      <a class="menu-trigger" href="#">
+        <span></span>
+        <span></span>
+        <span></span>
+      </a>
+    </div>
+
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>

@@ -1,71 +1,29 @@
-<!--<div class="container">-->
-<!--  <div class="row">-->
-<!--    <div class='mx-auto col-11 col-sm-10 col-lg-8 col-xl-6'>-->
+<div class="container">
+  <div class="row">
+    <div class='mx-auto col-11 col-sm-10 col-lg-8 col-xl-6'>
       
-<!--     <!DOCTYPE html>-->
-<!--<html lang="ja">-->
-<!--  <head>-->
-<!--    <meta charset="UTF-8" />-->
-<!--  </head>-->
-<!--  <body>-->
-<!--    <script src="app.js"></script>-->
-<!--  </body>-->
-<!--</html>-->
-    
-<!--      <h1>welcome to !<i class="fas fa-book"></i><strong>Bookers</strong>  !!</h1>-->
-<!--      <p>In  <i class="fas fa-book"></i><strong>Bookers</strong>, </p>-->
-<!--      <p>you can share and exchange  your opinions , inpressions , and emotions</p>-->
-<!--      <p> about various books!</p>-->
-<!--      <div class="btn-wrapper col-10 mx-auto">-->
-<!--        <div class="row">-->
-<!--          <%#= link_to 'Log in',new_user_session_path, class: "btn btn-info btn-sm btn-block mb-3 sign_in" %>-->
-<!--        </div>-->
-<!--        <div class="row">-->
-<!--          <%#= link_to 'Sign Up',new_user_registration_path, class: "btn btn-success btn-sm btn-block sign_up" %>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--  </div>-->
-<!--</div>-->
-
- <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>10章【ハンバーガーメニューを作ってみよう】</title>
-    <link rel="stylesheet" href="css/style.css" />
+     <!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
   </head>
   <body>
-    <h1>10章【ハンバーガーメニューを作ってみよう】</h1>
-
-    <div id="sp-menu">
-      <h2>MENU</h2>
-      <ul>
-        <li><a href="#">MENU1</a></li>
-        <li><a href="#">MENU2</a></li>
-        <li><a href="#">MENU3</a></li>
-        <li><a href="#">MENU4</a></li>
-        <li><a href="#">MENU5</a></li>
-      </ul>
-    </div>
-
-    <div id="hm-icon">
-      <a class="menu-trigger" href="#">
-        <span></span>
-        <span></span>
-        <span></span>
-      </a>
-    </div>
-
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-
-    <script src="js/jquery.min.js"></script>
-    <script src="js/script.js"></script>
+    <script src="app.js"></script>
   </body>
 </html>
+    
+      <h1>welcome to !<i class="fas fa-book"></i><strong>Bookers</strong>  !!</h1>
+      <p>In  <i class="fas fa-book"></i><strong>Bookers</strong>, </p>
+      <p>you can share and exchange  your opinions , inpressions , and emotions</p>
+      <p> about various books!</p>
+      <div class="btn-wrapper col-10 mx-auto">
+        <div class="row">
+          <%= link_to 'Log in',new_user_session_path, class: "btn btn-info btn-sm btn-block mb-3 sign_in" %>
+        </div>
+        <div class="row">
+          <%= link_to 'Sign Up',new_user_registration_path, class: "btn btn-success btn-sm btn-block sign_up" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
