@@ -56,11 +56,11 @@ console.log(nickname)
 let nickname = "ichiro"
 console.log(nickname)
 
-// constによる再宣言
-// const nickname = "taro"
-// console.log(nickname)
-// const nickname = "ichiro"
-// console.log(nickname)
+constによる再宣言
+const nickname = "taro"
+console.log(nickname)
+const nickname = "ichiro"
+console.log(nickname)
 
 // varによる再代入
 var nickname = "taro"
